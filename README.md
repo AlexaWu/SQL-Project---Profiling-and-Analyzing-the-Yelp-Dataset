@@ -11,7 +11,7 @@ The project has two parts.
 `In the first part`, there are a series of questions regarding the data to help profile and better understand the data.
 
 
-`In the second part`, I came up with several particular research question for analysis, my own **inferences and analysis of the data** for the questions, and **prepared the dataset for the analysis**. 
+`In the second part`, I **came up with several particular research question for analysis**, my own **inferences and analysis of the data** for the questions, and **prepared the dataset for the analysis**. 
 
 
 _Feel free to use any Text Editor (Windows Notepad, Apple TextEdit, Notepad ++, Sublime Text, etc.) to copy, paste, and test code._
