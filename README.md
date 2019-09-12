@@ -17,4 +17,4 @@ In the second part, I come up with my own question for analysis, my own own infe
 Feel free to use any Text Editor (Windows Notepad, Apple TextEdit, Notepad ++, Sublime Text, etc.) to copy, paste, and test code.
 
 
-![Yelp Dataset ER Diagram.png](http://github.com/AlexaWu/SQL-Project/raw/master/Yelp%20Dataset%20ER%20Diagram.png)
+![Yelp Dataset ER Diagram.png](Yelp%20Dataset%20ER%20Diagram.png)
