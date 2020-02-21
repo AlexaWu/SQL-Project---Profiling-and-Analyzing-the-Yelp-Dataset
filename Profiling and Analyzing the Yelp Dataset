@@ -1,96 +1,19 @@
 Part 1: Yelp Dataset Profiling and Understanding
 
 1. Profile the data by finding the total number of records for each of the tables below:
-	
-i. Attribute table = 10000
 	select count(*)
-	from Attribute;
-ii. Business table = 10000
-	select count(*)
-	from Business;
-iii. Category table = 10000
-	select count(*)
-	from category;
-iv. Checkin table = 10000
-	select count(*)
-	from checkin;
-v. elite_years table = 10000
-	select count(*)
-	from elite_years;
-vi. friend table = 10000
-	select count(*)
-	from friend;
-vii. hours table = 10000
-	select count(*)
-	from hours;
-viii. photo table = 10000
-	select count(*)
-	from photo;
-ix. review table = 10000
-	select count(*)
-	from review;
-x. tip table = 10000
-	select count(*)
-	from tip;
-xi. user table = 10000
-	select count(*)
-	from user;
+	from table_name;
 
 
 2. Find the total distinct records by either the foreign key or primary key for each table. If two foreign keys are listed in the table, please specify which foreign key.
-
-i. Business = 10000
-	select count(distinct(id))
-	from Business;
-
-ii. Hours = 1562
 	select count(distinct(business_id))
-	from Hours;
-
-iii. Category = 2643
-	select count(distinct(business_id))
-	from Category;
-
-iv. Attribute = 1115
-	select count(distinct(business_id))
-	from Attribute;
-
-v. Review = 10000
-	select count(distinct(id))
-	from Review;
-
-vi. Checkin = 493
-	select count(distinct(business_id))
-	from Checkin;
-
-vii. Photo = 10000
-	select count(distinct(id))
-	from Photo;
-
-viii. Tip = 537
-	select count(distinct(user_id))
-	from Tip;
-
-ix. User = 10000
-	select count(distinct(id))
-	from User;
-
-x. Friend = 11
-	select count(distinct(user_id))
-	from Friend;
-
-xi. Elite_years = 2780
-	select count(distinct(user_id))
-	from Elite_years;
-
+	from table_name;
 Note: Primary Keys are denoted in the ER-Diagram with a yellow key icon.	
-
 
 
 3. Are there any columns with null values in the Users table? Indicate "yes," or "no."
 
 	Answer: no.
-	
 	
 	SQL code used to arrive at answer:
 
