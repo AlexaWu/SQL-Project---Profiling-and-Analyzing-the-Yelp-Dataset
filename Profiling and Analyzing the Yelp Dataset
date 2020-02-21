@@ -1,11 +1,13 @@
 Part 1: Yelp Dataset Profiling and Understanding
 
 1. Profile the data by finding the total number of records for each of the tables below:
+
 	select count(*)
 	from table_name;
 
 
 2. Find the total distinct records by either the foreign key or primary key for each table. If two foreign keys are listed in the table, please specify which foreign key.
+
 	select count(distinct(business_id))
 	from table_name;
 	
