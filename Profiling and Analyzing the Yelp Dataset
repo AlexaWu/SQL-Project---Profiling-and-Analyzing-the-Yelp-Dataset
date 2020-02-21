@@ -8,6 +8,7 @@ Part 1: Yelp Dataset Profiling and Understanding
 2. Find the total distinct records by either the foreign key or primary key for each table. If two foreign keys are listed in the table, please specify which foreign key.
 	select count(distinct(business_id))
 	from table_name;
+	
 Note: Primary Keys are denoted in the ER-Diagram with a yellow key icon.	
 
 
