@@ -47,40 +47,9 @@ Note: Primary Keys are denoted in the ER-Diagram with a yellow key icon.
 	
 4. For each table and column listed below, display the smallest (minimum), largest (maximum), and average (mean) value for the following fields:
 
-	i. Table: Review, Column: Stars
-	
-		min: 1		max: 5		avg: 3.7082
-		
-	select min(stars), max(stars), avg(stars)
-	from review;
+	select min(column_name), max(column_name), avg(column_name)
+	from table_name;
 
-	ii. Table: Business, Column: Stars
-	
-		min: 1.0	max: 5.0	avg: 3.6549
-		
-	select min(stars), max(stars), avg(stars)
-	from Business;
-
-	iii. Table: Tip, Column: Likes
-	
-		min: 0		max: 2		avg: 0.0144
-		
-	select min(Likes), max(Likes), avg(Likes)
-	from Tip;
-
-	iv. Table: Checkin, Column: Count
-	
-		min: 1		max: 53		avg: 1.9414
-		
-	select min(Count), max(Count), avg(Count)
-	from Checkin;
-
-	v. Table: User, Column: Review_count
-	
-		min: 0		max: 2000	avg: 24.2995
-		
-	select min(Review_count), max(Review_count), avg(Review_count)
-	from User;
 
 
 5. List the cities with the most reviews in descending order:
