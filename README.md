@@ -14,7 +14,7 @@ The project has two parts.
 `In the second part`, I **came up with several particular research question for analysis**, my own **inferences and analysis of the data** for the questions, and **prepared the dataset for the analysis**. 
 
 
-_Feel free to use any Text Editor (Windows Notepad, Apple TextEdit, Notepad ++, Sublime Text, etc.) to copy, paste, and test code._
+_Feel free to use any Text Editor (Windows Notepad, Apple TextEdit, Notepad ++, Sublime Text, etc.) to test code._
 
 
 ![Yelp Dataset ER Diagram.png](Yelp%20Dataset%20ER%20Diagram.png)
