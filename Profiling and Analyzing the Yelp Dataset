@@ -10,8 +10,6 @@ Part 1: Yelp Dataset Profiling and Understanding
 
 	select count(distinct(business_id))
 	from table_name;
-	
-Note: Primary Keys are denoted in the ER-Diagram with a yellow key icon.	
 
 
 3. Are there any columns with null values in the Users table? Indicate "yes," or "no."
