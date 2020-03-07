@@ -18,3 +18,7 @@ _Feel free to use any Text Editor (Windows Notepad, Apple TextEdit, Notepad ++, 
 
 
 ![Yelp Dataset ER Diagram.png](Yelp%20Dataset%20ER%20Diagram.png)
+
+
+# Resources:
+https://www.coursera.org/learn/sql-for-data-science/peer/lBaEP/data-scientist-role-play-profiling-and-analyzing-the-yelp-dataset
