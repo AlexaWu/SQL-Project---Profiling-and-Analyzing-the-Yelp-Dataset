@@ -15,7 +15,6 @@ The project has two parts.
 
 
 _Note: Primary Keys are denoted in the ER-Diagram with a yellow key icon._
-_Feel free to use any Text Editor (Windows Notepad, Apple TextEdit, Notepad ++, Sublime Text, etc.) to test code._
 
 
 ![Yelp Dataset ER Diagram.png](Yelp%20Dataset%20ER%20Diagram.png)
