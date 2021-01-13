@@ -1,21 +1,21 @@
 ## Part 1: Yelp Dataset Profiling and Understanding
 
 1. Profile the data by finding the total number of records for each of the tables below:
-
+```javascript
 	select count(*)
 	from table_name;
-
+```
 
 2. Find the total distinct records by either the foreign key or primary key for each table. 
-
+```javascript
 	select count(distinct(business_id))
 	from table_name;
-
+```
 
 3. Are there any columns with null values in the Users table?
 
 	Answer: no.
-
+```javascript
 	select count(*)
 	from user
 	where id is null
@@ -38,28 +38,26 @@
 	or compliment_funny is null 
 	or compliment_writer is null 
 	or compliment_photos is null;
-	
+```	
 
-	
 4. For each table and column listed below, display the smallest (minimum), largest (maximum), and average (mean) value for the following fields:
-
+```javascript
 	select min(column_name), max(column_name), avg(column_name)
 	from table_name;
+```
 
 
-
-/*5. List the cities with the most reviews in descending order:*/
-	
+5. List the cities with the most reviews in descending order:
+```javascript	
 	select city, sum(review_count) as reviews
 	from business
 	group by city
 	order by reviews desc;
-	
+```	
 	Copy and Paste the Result Below:
 
-+-----------------+---------+
-| city            | reviews |
-+-----------------+---------+
+ city            | reviews 
+--|--
 | Las Vegas       |   82854 |
 | Phoenix         |   34503 |
 | Toronto         |   24113 |
@@ -85,43 +83,42 @@
 | Surprise        |    1520 |
 | Lakewood        |    1465 |
 | Goodyear        |    1155 |
-+-----------------+---------+
+
 (Output limit exceeded, 25 of 362 total rows shown)
 	
 
+6. Find the distribution of star ratings to the business in the following cities:
 
-/*6. Find the distribution of star ratings to the business in the following cities:
-
-i. Avon*/
-	
+i. Avon
+```javascript	
 	select stars, count(stars) as count
 	from business
 	where city = 'Avon'
 	group by stars;
-
+```
 Copy and Paste the Resulting Table Below (2 columns – star rating and count):
-+-------+-------+
+
 | stars | count |
-+-------+-------+
+--|--
 |   1.5 |     1 |
 |   2.5 |     2 |
 |   3.5 |     3 |
 |   4.0 |     2 |
 |   4.5 |     1 |
 |   5.0 |     1 |
-+-------+-------+
 
-/*ii. Beachwood*/
 
+ii. Beachwood
+```javascript
 	select stars, count(stars) as count
 	from business
 	where city = 'Beachwood'
 	group by stars;
-
+```
 Copy and Paste the Resulting Table Below (2 columns – star rating and count):
-+-------+-------+
+
 | stars | count |
-+-------+-------+
+--|--
 |   2.0 |     1 |
 |   2.5 |     1 |
 |   3.0 |     2 |
@@ -129,42 +126,38 @@ Copy and Paste the Resulting Table Below (2 columns – star rating and count):
 |   4.0 |     1 |
 |   4.5 |     2 |
 |   5.0 |     5 |
-+-------+-------+
 
 
-
-/*7. Find the top 3 users based on their total number of reviews:*/
-
+7. Find the top 3 users based on their total number of reviews:
+```javascript
 	select id, name, review_count
 	from user
 	order by review_count desc
 	limit 3;
-
+```
 	Copy and Paste the Result Below:
 		
-+------------------------+--------+--------------+
 | id                     | name   | review_count |
-+------------------------+--------+--------------+
+--|--|--
 | -G7Zkl1wIWBBmD0KRy_sCw | Gerald |         2000 |
 | -3s52C4zL_DHRK0ULG6qtg | Sara   |         1629 |
 | -8lbUNlXVSoXqaRRiHiSNg | Yuri   |         1339 |
-+------------------------+--------+--------------+
 
 
-
-/*8. Does posing more reviews correlate with more fans?*/
+8. Does posing more reviews correlate with more fans?
 			      
 	No. Based on the SQL code and result attached below, if we take a look at column review_count and column fans, 
 	as the review_count decreasing, fans amount is floating but doesn't decrease. Therefore, posing more reviews not
 	correlate with more fans, other factors should also be take into consideration.
 
+```javascript
 	select name, review_count, fans, yelping_since
 	from user
 	order by review_count desc;
-			      
-+-----------+--------------+------+---------------------+
+```			      
+
 | name      | review_count | fans | yelping_since       |
-+-----------+--------------+------+---------------------+
+--|--|--
 | Gerald    |         2000 |  253 | 2012-12-16 00:00:00 |
 | Sara      |         1629 |   50 | 2010-05-16 00:00:00 |
 | Yuri      |         1339 |   76 | 2008-01-03 00:00:00 |
@@ -190,29 +183,31 @@ Copy and Paste the Resulting Table Below (2 columns – star rating and count):
 | Angela    |          694 |  101 | 2010-10-01 00:00:00 |
 | Crissy    |          676 |   25 | 2008-07-31 00:00:00 |
 | Lyn       |          675 |   45 | 2009-11-07 00:00:00 |
-+-----------+--------------+------+---------------------+
+
 (Output limit exceeded, 25 of 10000 total rows shown)
 
 
 	
-/*9. Are there more reviews with the word "love" or with the word "hate" in them?*/
+9. Are there more reviews with the word "love" or with the word "hate" in them?
 
 	Answer: Yes. There are 1780 reviews with the word 'love' and 232 reviews with the word 'hate'.
-	
+```javascript	
 	select count(*)
 	from review
 	where text like '%love%';
-			      
-+----------+
-| count(*) |
-+----------+
-|     1780 |
-+----------+
+```
 
+
+| count(*) |
+--|
+|     1780 
+
+```javascript
 	select count(*)
 	from review
 	where text like '%hate%';
-			      
+```
+
 +----------+
 | count(*) |
 +----------+
