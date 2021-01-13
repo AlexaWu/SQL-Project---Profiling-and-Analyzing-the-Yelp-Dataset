@@ -5,16 +5,16 @@
 	select count(*)
 	from table_name;
 ```
-i. Attribute table = 10000
-ii. Business table = 10000
-iii. Category table = 10000
-iv. Checkin table = 10000 
-v. elite_years table = 10000 
-vi. friend table = 10000
-vii. hours table = 10000
-viii. photo table = 10000
-ix. review table = 10000
-x. tip table = 10000
+i. Attribute table = 10000\
+ii. Business table = 10000\
+iii. Category table = 10000\
+iv. Checkin table = 10000 \
+v. elite_years table = 10000 \
+vi. friend table = 10000\
+vii. hours table = 10000\
+viii. photo table = 10000\
+ix. review table = 10000\
+x. tip table = 10000\
 xi. user table = 10000
 
 2. Find the total distinct records by either the foreign key or primary key for each table. 
@@ -22,16 +22,16 @@ xi. user table = 10000
 	select count(distinct(business_id))
 	from table_name;
 ```
-i. Business = ID: 10000
-ii. Hours = business_id: 1562
-iii. Category = business_id: 2643
-iv. Attribute = business_id: 1115
-v. Review = primary key: ID: 10000. foreign key : business_id : 8090; user_id: 9581
-vi. Checkin = business_id : 493
-vii. Photo = primary key: ID: 10000. foreign key : business_id: 6493
-viii. Tip = user_id: 537; business_id: 3979
-ix. User = ID: 10000
-x. Friend = user_id: 11
+i. Business = ID: 10000\
+ii. Hours = business_id: 1562\
+iii. Category = business_id: 2643\
+iv. Attribute = business_id: 1115\
+v. Review = primary key: ID: 10000. foreign key : business_id : 8090; user_id: 9581\
+vi. Checkin = business_id : 493\
+vii. Photo = primary key: ID: 10000. foreign key : business_id: 6493\
+viii. Tip = user_id: 537; business_id: 3979\
+ix. User = ID: 10000\
+x. Friend = user_id: 11\
 xi. Elite_years =user_id : 2780
 
 3. Are there any columns with null values in the Users table?
