@@ -1,18 +1,18 @@
-/*Part 1: Yelp Dataset Profiling and Understanding
+## Part 1: Yelp Dataset Profiling and Understanding
 
-1. Profile the data by finding the total number of records for each of the tables below:*/
+1. Profile the data by finding the total number of records for each of the tables below:
 
 	select count(*)
 	from table_name;
 
 
-/*2. Find the total distinct records by either the foreign key or primary key for each table. */
+2. Find the total distinct records by either the foreign key or primary key for each table. 
 
 	select count(distinct(business_id))
 	from table_name;
 
 
-/*3. Are there any columns with null values in the Users table?*/
+3. Are there any columns with null values in the Users table?
 
 	Answer: no.
 
@@ -41,7 +41,7 @@
 	
 
 	
-/*4. For each table and column listed below, display the smallest (minimum), largest (maximum), and average (mean) value for the following fields:*/
+4. For each table and column listed below, display the smallest (minimum), largest (maximum), and average (mean) value for the following fields:
 
 	select min(column_name), max(column_name), avg(column_name)
 	from table_name;
