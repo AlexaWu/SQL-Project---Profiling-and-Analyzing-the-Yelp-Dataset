@@ -54,7 +54,7 @@
 	group by city
 	order by reviews desc;
 ```	
-	Copy and Paste the Result Below:
+	Result:
 
  city            | reviews 
 --|--
@@ -96,9 +96,9 @@ i. Avon
 	where city = 'Avon'
 	group by stars;
 ```
-Copy and Paste the Resulting Table Below (2 columns – star rating and count):
+Resulting Table (2 columns – star rating and count):
 
-| stars | count |
+ stars | count
 --|--
 |   1.5 |     1 |
 |   2.5 |     2 |
@@ -115,7 +115,7 @@ ii. Beachwood
 	where city = 'Beachwood'
 	group by stars;
 ```
-Copy and Paste the Resulting Table Below (2 columns – star rating and count):
+Resulting Table  (2 columns – star rating and count):
 
 | stars | count |
 --|--
@@ -135,7 +135,8 @@ Copy and Paste the Resulting Table Below (2 columns – star rating and count):
 	order by review_count desc
 	limit 3;
 ```
-	Copy and Paste the Result Below:
+
+	Result:
 		
 | id                     | name   | review_count |
 --|--|--
@@ -154,10 +155,10 @@ Copy and Paste the Resulting Table Below (2 columns – star rating and count):
 	select name, review_count, fans, yelping_since
 	from user
 	order by review_count desc;
-```			      
+```
 
 | name      | review_count | fans | yelping_since       |
---|--|--
+--|--|--|--
 | Gerald    |         2000 |  253 | 2012-12-16 00:00:00 |
 | Sara      |         1629 |   50 | 2010-05-16 00:00:00 |
 | Yuri      |         1339 |   76 | 2008-01-03 00:00:00 |
@@ -186,7 +187,6 @@ Copy and Paste the Resulting Table Below (2 columns – star rating and count):
 
 (Output limit exceeded, 25 of 10000 total rows shown)
 
-
 	
 9. Are there more reviews with the word "love" or with the word "hate" in them?
 
@@ -196,8 +196,6 @@ Copy and Paste the Resulting Table Below (2 columns – star rating and count):
 	from review
 	where text like '%love%';
 ```
-
-
 | count(*) |
 --|
 |     1780 
@@ -208,26 +206,23 @@ Copy and Paste the Resulting Table Below (2 columns – star rating and count):
 	where text like '%hate%';
 ```
 
-+----------+
 | count(*) |
-+----------+
+--|
 |      232 |
-+----------+
 	
 
-
 10. Find the top 10 users with the most fans:
-
-	SQL code used to arrive at answer:
+```javascript
 	select name, fans
   	from user
 	order by fans desc
 	limit 10;
-	
-	Copy and Paste the Result Below:
-+-----------+------+
+```
+
+Result:
+
 | name      | fans |
-+-----------+------+
+--|--
 | Amy       |  503 |
 | Mimi      |  497 |
 | Harald    |  311 |
@@ -238,9 +233,6 @@ Copy and Paste the Resulting Table Below (2 columns – star rating and count):
 | William   |  126 |
 | Fran      |  124 |
 | Lissa     |  120 |
-+-----------+------+
-	
-	
 
 11. Is there a strong relationship (or correlation) between having a high number of fans and being listed as "useful" or "funny?" Out of the top 10 users with the highest number of fans, what percent are also listed as “useful” or “funny”?
 
@@ -248,17 +240,18 @@ Key:
 0% - 25% - Low relationship
 26% - 75% - Medium relationship
 76% - 100% - Strong relationship
-	
+```javascript
 	select name, fans, useful, funny, cool,
 	((useful+funny)*100)/(useful+funny+cool) as percentage
 	from user
 	order by fans desc
 	limit 10;
+```
 
-	Copy and Paste the Result Below:
-+-----------+------+--------+--------+--------+------------+
+Result:
+
 | name      | fans | useful |  funny |   cool | percentage |
-+-----------+------+--------+--------+--------+------------+
+--|--|--|--|--|--
 | Amy       |  503 |   3226 |   2554 |   2751 |         67 |
 | Mimi      |  497 |    257 |    138 |    159 |         71 |
 | Harald    |  311 | 122921 | 122419 | 122890 |         66 |
@@ -269,9 +262,8 @@ Key:
 | William   |  126 |   9363 |   9361 |   9370 |         66 |
 | Fran      |  124 |   9851 |   7606 |   9344 |         65 |
 | Lissa     |  120 |    455 |    150 |    342 |         63 |
-+-----------+------+--------+--------+--------+------------+
 	
-	Please explain your findings and interpretation of the results:
+	findings and interpretation of the results:
 	
 	As shown in the above result, there is top 10 users with the highest number of fans with their listed as "useful" or "funny".
 	And the percent are also listed as “useful” or “funny”. Clearly, as the column 'fans' decreasing, the column 'percentage' 
@@ -279,7 +271,7 @@ Key:
 	
 	
 
-Part 2: Inferences and Analysis
+## Part 2: Inferences and Analysis
 
 1. Pick one city and category of your choice and group the businesses in that city or category by their overall star rating. 
 Compare the businesses with 2-3 stars to the businesses with 4-5 stars and answer the following questions. Include your code.
@@ -299,6 +291,7 @@ iii. Are you able to infer anything from the location data provided between thes
 	No, since both group 4-5 stars and group 2-3 stars are in the same state ON, so we couldn't infer further information through location data.
 
 SQL code used for analysis:
+```javascript
 	select city, category, hours, stars, review_count, state,
 	(stars between '2.0' and '3.0') as '2-3 stars',
 	(stars between '4.0' and '5.0') as '4-5 stars'
@@ -311,9 +304,10 @@ SQL code used for analysis:
 	and category = 'Restaurants'
  	group by stars
 	order by stars DESC;
-+---------+-------------+-----------------------+-------+--------------+-------+-----------+-----------+
+```
+
 | city    | category    | hours                 | stars | review_count | state | 2-3 stars | 4-5 stars |
-+---------+-------------+-----------------------+-------+--------------+-------+-----------+-----------+
+--|--|--|--|--|--|--|--
 | Toronto | Restaurants | Monday|16:00-2:00     |   4.5 |           26 | ON    |         0 |         1 |
 | Toronto | Restaurants | Tuesday|18:00-2:00    |   4.5 |           26 | ON    |         0 |         1 |
 | Toronto | Restaurants | Friday|18:00-2:00     |   4.5 |           26 | ON    |         0 |         1 |
@@ -354,10 +348,8 @@ SQL code used for analysis:
 | Toronto | Restaurants | Thursday|11:00-23:00  |   2.0 |            5 | ON    |         1 |         0 |
 | Toronto | Restaurants | Sunday|11:00-23:00    |   2.0 |            5 | ON    |         1 |         0 |
 | Toronto | Restaurants | Saturday|11:00-23:00  |   2.0 |            5 | ON    |         1 |         0 |
-+---------+-------------+-----------------------+-------+--------------+-------+-----------+-----------+
 
-	
-	
+
 2. Group business based on the ones that are open and the ones that are closed. What differences can you find between the ones 
 that are still open and the ones that are closed? List at least two differences and the SQL code you used to arrive at your answer.
 		
@@ -372,19 +364,20 @@ ii. Difference 2:
 	Therefore, 'group business that are open' have higher average stars rating than 'group business that are closed'.
          
 SQL code used for analysis:
+```javascript
 	select is_open, avg(latitude), avg(longitude),
 	sum(review_count), avg(review_count), avg(stars)
 	from business
 	group by is_open;
-+---------+---------------+----------------+-------------------+-------------------+---------------+
+```
+
 | is_open | avg(latitude) | avg(longitude) | sum(review_count) | avg(review_count) |    avg(stars) |
-+---------+---------------+----------------+-------------------+-------------------+---------------+
+--|--|--|--|--|--
 |       0 | 38.8135013816 | -92.3074901316 |             35261 |     23.1980263158 | 3.52039473684 |
 |       1 | 38.5594333019 | -92.7458396236 |            269300 |     31.7570754717 | 3.67900943396 |
-+---------+---------------+----------------+-------------------+-------------------+---------------+
-	
 
 	
+
 3. For this last part of your analysis, you are going to choose the type of analysis you want to conduct on the Yelp dataset and are going to prepare 
 the data for analysis.
 
@@ -404,9 +397,9 @@ ii. Write 1-2 brief paragraphs on the type of data you will need for your analys
 	Besides, with the stars increasing, the average latitude almost don't change, but the average longtitude has decreasing.
                   
 iii. Output of your finished dataset:
-+--------------------------+----------+------------+---------------+----------------+-------------------+-------------------+-------+
+
 | name                     | count(*) | sum(value) | avg(latitude) | avg(longitude) | avg(review_count) | sum(review_count) | stars |
-+--------------------------+----------+------------+---------------+----------------+-------------------+-------------------+-------+
+--|--|--|--|--|--|--|--
 | Burger King              |        5 |          2 |       41.7151 |       -81.2996 |               4.0 |                20 |   1.0 |
 | Royal Dumpling           |        7 |        3.0 |       43.7752 |        -79.414 |               4.0 |                28 |   1.5 |
 | Ghost Armor SS Springs   |       62 |       53.0 | 40.4840387097 | -82.0749045161 |     6.20967741935 |               385 |   2.0 |
@@ -416,9 +409,10 @@ iii. Output of your finished dataset:
 | Edulis                   |      182 |       96.0 | 38.7087873626 | -95.3600736264 |     116.104395604 |             21131 |   4.0 |
 | Oaks Golf Course         |       48 |       33.0 | 37.4904041667 | -99.9474958333 |     8.89583333333 |               427 |   4.5 |
 | Back-Health Chiropractic |       41 |       31.0 | 36.0819463415 | -102.581919512 |     8.31707317073 |               341 |   5.0 |
-+--------------------------+----------+------------+---------------+----------------+-------------------+-------------------+-------+
+
          
 iv. Provide the SQL code you used to create your final dataset:
+```javascript
 	select business.name, count(*), sum(value), 
 	avg(latitude), avg(longitude),
 	avg(review_count), sum(review_count), stars
@@ -426,3 +420,4 @@ iv. Provide the SQL code you used to create your final dataset:
 	inner join attribute
 	on business.id = attribute.business_id
 	group by stars;
+```
