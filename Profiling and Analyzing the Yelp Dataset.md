@@ -76,7 +76,8 @@ xi. Elite_years =user_id : 2780
 	group by city
 	order by reviews desc;
 ```	
-	Result:
+
+Result:
 
  city            | reviews 
 --|--
