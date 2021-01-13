@@ -1,22 +1,20 @@
-Part 1: Yelp Dataset Profiling and Understanding
+/*Part 1: Yelp Dataset Profiling and Understanding
 
-1. Profile the data by finding the total number of records for each of the tables below:
+1. Profile the data by finding the total number of records for each of the tables below:*/
 
 	select count(*)
 	from table_name;
 
 
-2. Find the total distinct records by either the foreign key or primary key for each table. If two foreign keys are listed in the table, please specify which foreign key.
+/*2. Find the total distinct records by either the foreign key or primary key for each table. */
 
 	select count(distinct(business_id))
 	from table_name;
 
 
-3. Are there any columns with null values in the Users table? Indicate "yes," or "no."
+/*3. Are there any columns with null values in the Users table?*/
 
 	Answer: no.
-	
-	SQL code used to arrive at answer:
 
 	select count(*)
 	from user
@@ -43,16 +41,14 @@ Part 1: Yelp Dataset Profiling and Understanding
 	
 
 	
-4. For each table and column listed below, display the smallest (minimum), largest (maximum), and average (mean) value for the following fields:
+/*4. For each table and column listed below, display the smallest (minimum), largest (maximum), and average (mean) value for the following fields:*/
 
 	select min(column_name), max(column_name), avg(column_name)
 	from table_name;
 
 
 
-5. List the cities with the most reviews in descending order:
-
-	SQL code used to arrive at answer:
+/*5. List the cities with the most reviews in descending order:*/
 	
 	select city, sum(review_count) as reviews
 	from business
@@ -94,11 +90,9 @@ Part 1: Yelp Dataset Profiling and Understanding
 	
 
 
-6. Find the distribution of star ratings to the business in the following cities:
+/*6. Find the distribution of star ratings to the business in the following cities:
 
-i. Avon
-
-SQL code used to arrive at answer:
+i. Avon*/
 	
 	select stars, count(stars) as count
 	from business
@@ -117,9 +111,7 @@ Copy and Paste the Resulting Table Below (2 columns – star rating and count):
 |   5.0 |     1 |
 +-------+-------+
 
-ii. Beachwood
-
-SQL code used to arrive at answer:
+/*ii. Beachwood*/
 
 	select stars, count(stars) as count
 	from business
@@ -141,9 +133,7 @@ Copy and Paste the Resulting Table Below (2 columns – star rating and count):
 
 
 
-7. Find the top 3 users based on their total number of reviews:
-		
-	SQL code used to arrive at answer:
+/*7. Find the top 3 users based on their total number of reviews:*/
 
 	select id, name, review_count
 	from user
@@ -162,16 +152,16 @@ Copy and Paste the Resulting Table Below (2 columns – star rating and count):
 
 
 
-8. Does posing more reviews correlate with more fans?
+/*8. Does posing more reviews correlate with more fans?*/
+			      
 	No. Based on the SQL code and result attached below, if we take a look at column review_count and column fans, 
 	as the review_count decreasing, fans amount is floating but doesn't decrease. Therefore, posing more reviews not
 	correlate with more fans, other factors should also be take into consideration.
 
-	Please explain your findings and interpretation of the results:
-	
 	select name, review_count, fans, yelping_since
 	from user
 	order by review_count desc;
+			      
 +-----------+--------------+------+---------------------+
 | name      | review_count | fans | yelping_since       |
 +-----------+--------------+------+---------------------+
@@ -205,16 +195,14 @@ Copy and Paste the Resulting Table Below (2 columns – star rating and count):
 
 
 	
-9. Are there more reviews with the word "love" or with the word "hate" in them?
+/*9. Are there more reviews with the word "love" or with the word "hate" in them?*/
 
 	Answer: Yes. There are 1780 reviews with the word 'love' and 232 reviews with the word 'hate'.
-
-	
-	SQL code used to arrive at answer:
 	
 	select count(*)
 	from review
 	where text like '%love%';
+			      
 +----------+
 | count(*) |
 +----------+
@@ -224,6 +212,7 @@ Copy and Paste the Resulting Table Below (2 columns – star rating and count):
 	select count(*)
 	from review
 	where text like '%hate%';
+			      
 +----------+
 | count(*) |
 +----------+
@@ -264,8 +253,6 @@ Key:
 0% - 25% - Low relationship
 26% - 75% - Medium relationship
 76% - 100% - Strong relationship
-	
-	SQL code used to arrive at answer:
 	
 	select name, fans, useful, funny, cool,
 	((useful+funny)*100)/(useful+funny+cool) as percentage
