@@ -14,7 +14,7 @@ _Note: Primary Keys are denoted in the ER-Diagram with a yellow key icon._
 
 The project has two parts.
 
-`In the first part`, I used basic SQL (aggregations, joins, count & nulls, group by, order by, limit, like, etc.) to profile and understand Yelp dataset
+`In the first part`, I used basic SQL (count & nulls, distinct, joins, aggregations, group by, order by, limit, like, etc.) to profile and understand Yelp dataset
 
 `In the second part`, I conduct analysis on the Yelp dataset and prepare the data for analysis. (Include: Parsing out keywords and business attributes for sentiment analysis, clustering businesses to find commonalities or anomalies between them, predicting the overall star rating for a business, predicting the number of fans a user will have, and so on.)
 
