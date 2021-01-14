@@ -3,7 +3,7 @@
 ### :smiley: Yelp Dataset
 Using a large dataset and dataset ER diagram from Yelp, which provides a platform for users to provide reviews and rate their interactions with a variety of organizations – businesses, restaurants, health clubs, hospitals, local governmental offices, charitable organizations, etc. Yelp has made a portion of this data available for personal, educational, and academic purposes.
 
-### ERD 
+### Entity Relationship Diagram 
 
 _Note: Primary Keys are denoted in the ER-Diagram with a yellow key icon._
 
