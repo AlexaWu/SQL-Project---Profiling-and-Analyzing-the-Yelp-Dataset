@@ -14,9 +14,9 @@ _Note: Primary Keys are denoted in the ER-Diagram with a yellow key icon._
 
 The project has two parts.
 
-`In the first part`, there are a series of questions regarding the data to help profile and better understand the data.
+`In the first part`, I used basic SQL (aggregations, joins, count & nulls, group by, order by, limit, like, etc.) to profile and understand Yelp dataset
 
-`In the second part`, I came up with several particular research question for analysis, my own **inferences and analysis of the data**, and **prepared the dataset for the analysis**. 
+`In the second part`, I conduct analysis on the Yelp dataset and prepare the data for analysis. (Include: Parsing out keywords and business attributes for sentiment analysis, clustering businesses to find commonalities or anomalies between them, predicting the overall star rating for a business, predicting the number of fans a user will have, and so on.)
 
 #### Part 1: Yelp Dataset Profiling and Understanding
 1. Profile the data by finding the total number of records for each of the tables.
@@ -34,4 +34,4 @@ The project has two parts.
 #### Part 2: Inferences and Analysis
 1. Pick one city and category of your choice and group the businesses in that city or category by their overall star rating. Compare the businesses with 2-3 stars to the businesses with 4-5 stars
 2. Group business based on the ones that are open and the ones that are closed. What differences can you find between the ones that are still open and the ones that are closed? 
-3. conduct analysis on the Yelp dataset and prepare the data for analysis. (Include: Parsing out keywords and business attributes for sentiment analysis, clustering businesses to find commonalities or anomalies between them, predicting the overall star rating for a business, predicting the number of fans a user will have, and so on.)
+3. Conduct analysis on the Yelp dataset and prepare the data for analysis
