@@ -10,7 +10,7 @@ _Note: Primary Keys are denoted in the ER-Diagram with a yellow key icon._
 ![Yelp Dataset ER Diagram.png](Yelp%20Dataset%20ER%20Diagram.png)
 
 
-### Insights
+### [Insights](https://github.com/AlexaWu/SQL-Project---Yelp-Dataset/blob/master/Profiling%20and%20Analyzing%20the%20Yelp%20Dataset.md)
 
 The project has two parts.
 
