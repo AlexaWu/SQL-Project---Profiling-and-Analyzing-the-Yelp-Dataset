@@ -1,16 +1,16 @@
 # SQL Project - Profiling and Analyzing the Yelp Dataset 
 
-### :smiley: Yelp Dataset
+### :bookmark: Yelp Dataset
 Using a large dataset and dataset ER diagram from Yelp, which provides a platform for users to provide reviews and rate their interactions with a variety of organizations – businesses, restaurants, health clubs, hospitals, local governmental offices, charitable organizations, etc. Yelp has made a portion of this data available for personal, educational, and academic purposes.
 
-### Entity Relationship Diagram 
+### :bookmark:Entity Relationship Diagram 
 
 _Note: Primary Keys are denoted in the ER-Diagram with a yellow key icon._
 
 ![Yelp Dataset ER Diagram.png](Yelp%20Dataset%20ER%20Diagram.png)
 
 
-### [Insights](https://github.com/AlexaWu/SQL-Project---Yelp-Dataset/blob/master/Profiling%20and%20Analyzing%20the%20Yelp%20Dataset.md)
+### :bookmark: [Data Analysis Insights]
 
 The project has two parts.
 
@@ -18,7 +18,7 @@ The project has two parts.
 
 `In the second part`, I conduct analysis on the Yelp dataset and prepare the data for analysis. (Include: Parsing out keywords and business attributes for sentiment analysis, clustering businesses to find commonalities or anomalies between them, predicting the overall star rating for a business, predicting the number of fans a user will have, and so on.)
 
-#### Part 1: Yelp Dataset Profiling and Understanding
+#### [Part 1: Yelp Dataset Profiling and Understanding](https://github.com/AlexaWu/SQL-Project---Yelp-Dataset/blob/master/Profiling%20and%20Analyzing%20the%20Yelp%20Dataset.md#part-1-yelp-dataset-profiling-and-understanding)
 1. Profile the data by finding the total number of records for each of the tables.
 2. Find the total distinct records by either the foreign key or primary key for each table.
 3. Are there any columns with null values in the Users table?
@@ -31,7 +31,7 @@ The project has two parts.
 10. Find the top 10 users with the most fans
 11. Is there a strong relationship (or correlation) between having a high number of fans and being listed as "useful" or "funny?" Out of the top 10 users with the highest number of fans, what percent are also listed as “useful” or “funny”?
 
-#### Part 2: Inferences and Analysis
+#### [Part 2: Inferences and Analysis](https://github.com/AlexaWu/SQL-Project---Yelp-Dataset/blob/master/Profiling%20and%20Analyzing%20the%20Yelp%20Dataset.md#part-2-inferences-and-analysis)
 1. Pick one city and category of your choice and group the businesses in that city or category by their overall star rating. Compare the businesses with 2-3 stars to the businesses with 4-5 stars
 2. Group business based on the ones that are open and the ones that are closed. What differences can you find between the ones that are still open and the ones that are closed? 
 3. Conduct analysis on the Yelp dataset and prepare the data for analysis
