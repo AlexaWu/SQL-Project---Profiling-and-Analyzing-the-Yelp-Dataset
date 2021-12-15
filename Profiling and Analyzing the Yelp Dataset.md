@@ -1,7 +1,7 @@
 ## Part 1: Yelp Dataset Profiling and Understanding
 
 1. Profile the data by finding the total number of records for each of the tables below:
-```javascript
+```sql
 	select count(*)
 	from table_name;
 ```
@@ -18,7 +18,7 @@ x. tip table = 10000\
 xi. user table = 10000
 
 2. Find the total distinct records by either the foreign key or primary key for each table. 
-```javascript
+```sql
 	select count(distinct(business_id))
 	from table_name;
 ```
@@ -37,7 +37,7 @@ xi. Elite_years =user_id : 2780
 3. Are there any columns with null values in the Users table?
 
 	Answer: no.
-```javascript
+```sql
 	select count(*)
 	from user
 	where id is null
@@ -63,14 +63,14 @@ xi. Elite_years =user_id : 2780
 ```	
 
 4. For each table and column listed below, display the smallest (minimum), largest (maximum), and average (mean) value for the following fields:
-```javascript
+```sql
 	select min(column_name), max(column_name), avg(column_name)
 	from table_name;
 ```
 
 
 5. List the cities with the most reviews in descending order:
-```javascript	
+```sql	
 	select city, sum(review_count) as reviews
 	from business
 	group by city
@@ -113,7 +113,7 @@ Result:
 6. Find the distribution of star ratings to the business in the following cities:
 
 i. Avon
-```javascript	
+```sql	
 	select stars, count(stars) as count
 	from business
 	where city = 'Avon'
@@ -132,7 +132,7 @@ Resulting Table (2 columns – star rating and count):
 
 
 ii. Beachwood
-```javascript
+```sql
 	select stars, count(stars) as count
 	from business
 	where city = 'Beachwood'
@@ -152,7 +152,7 @@ Resulting Table  (2 columns – star rating and count):
 
 
 7. Find the top 3 users based on their total number of reviews:
-```javascript
+```sql
 	select id, name, review_count
 	from user
 	order by review_count desc
@@ -174,7 +174,7 @@ Resulting Table  (2 columns – star rating and count):
 	as the review_count decreasing, fans amount is floating but doesn't decrease. Therefore, posing more reviews not
 	correlate with more fans, other factors should also be take into consideration.
 
-```javascript
+```sql
 	select name, review_count, fans, yelping_since
 	from user
 	order by review_count desc;
@@ -214,7 +214,7 @@ Resulting Table  (2 columns – star rating and count):
 9. Are there more reviews with the word "love" or with the word "hate" in them?
 
 	Answer: Yes. There are 1780 reviews with the word 'love' and 232 reviews with the word 'hate'.
-```javascript	
+```sql	
 	select count(*)
 	from review
 	where text like '%love%';
@@ -223,7 +223,7 @@ Resulting Table  (2 columns – star rating and count):
 --|
 |     1780 
 
-```javascript
+```sql
 	select count(*)
 	from review
 	where text like '%hate%';
@@ -235,7 +235,7 @@ Resulting Table  (2 columns – star rating and count):
 	
 
 10. Find the top 10 users with the most fans:
-```javascript
+```sql
 	select name, fans
   	from user
 	order by fans desc
@@ -263,7 +263,7 @@ Key:
 0% - 25% - Low relationship
 26% - 75% - Medium relationship
 76% - 100% - Strong relationship
-```javascript
+```sql
 	select name, fans, useful, funny, cool,
 	((useful+funny)*100)/(useful+funny+cool) as percentage
 	from user
@@ -314,7 +314,7 @@ iii. Are you able to infer anything from the location data provided between thes
 	No, since both group 4-5 stars and group 2-3 stars are in the same state ON, so we couldn't infer further information through location data.
 
 SQL code used for analysis:
-```javascript
+```sql
 	select city, category, hours, stars, review_count, state,
 	(stars between '2.0' and '3.0') as '2-3 stars',
 	(stars between '4.0' and '5.0') as '4-5 stars'
@@ -387,9 +387,9 @@ ii. Difference 2:
 	Therefore, 'group business that are open' have higher average stars rating than 'group business that are closed'.
          
 SQL code used for analysis:
-```javascript
+```sql
 	select is_open, avg(latitude), avg(longitude),
-	sum(review_count), avg(review_count), avg(stars)
+		sum(review_count), avg(review_count), avg(stars)
 	from business
 	group by is_open;
 ```
@@ -435,10 +435,10 @@ iii. Output of your finished dataset:
 
          
 iv. Provide the SQL code you used to create your final dataset:
-```javascript
+```sql
 	select business.name, count(*), sum(value), 
-	avg(latitude), avg(longitude),
-	avg(review_count), sum(review_count), stars
+		avg(latitude), avg(longitude),
+		avg(review_count), sum(review_count), stars
 	from business
 	inner join attribute
 	on business.id = attribute.business_id
