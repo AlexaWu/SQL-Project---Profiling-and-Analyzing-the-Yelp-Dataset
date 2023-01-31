@@ -10,13 +10,19 @@ _Note: Primary Keys are denoted in the ER-Diagram with a yellow key icon._
 
 ![Yelp Dataset ER Diagram.png](Yelp%20Dataset%20ER%20Diagram.png)
 
-### :bookmark: Project details
+### :bookmark: Project summary
 
 The project has two parts.
 
-`In the first part`, I used basic SQL (count & nulls, distinct, joins, aggregations, group by, order by, limit, like, etc.) to profile and understand Yelp dataset
+`Part 1` I used SQL (count & nulls, distinct, joins, aggregations, group by, order by, limit, like, etc.) to profile and understand Yelp dataset.
 
-`In the second part`, I conduct analysis on the Yelp dataset and prepare the data for analysis. (Include: Parsing out keywords and business attributes for sentiment analysis, clustering businesses to find commonalities or anomalies between them, predicting the overall star rating for a business, predicting the number of fans a user will have, and so on.)
+`Part 2` I prepared the data and conduct Yelp dataset data analysis including: 
+- parse out keywords and business attributes for sentiment analysis
+- cluster businesses to find commonalities or anomalies between them
+- predicte the overall star rating for a business
+- predicte the number of fans a user will have
+
+### :bookmark: Project details
 
 #### [Part 1: Yelp Dataset Profiling and Understanding](https://github.com/AlexaWu/SQL-Project---Yelp-Dataset/blob/master/Profiling%20and%20Analyzing%20the%20Yelp%20Dataset.md#part-1-yelp-dataset-profiling-and-understanding)
 1. Profile the data by finding the total number of records for each of the tables.
