@@ -37,7 +37,7 @@ The project has two parts.
 10. Find the top 10 users with the most fans
 11. Is there a strong relationship (or correlation) between having a high number of fans and being listed as "useful" or "funny?" Out of the top 10 users with the highest number of fans, what percent are also listed as “useful” or “funny”?
 
-#### [Part 2: Inferences and Analysis](https://github.com/AlexaWu/SQL-Project---Yelp-Dataset/blob/master/Profiling%20and%20Analyzing%20the%20Yelp%20Dataset.md#part-2-inferences-and-analysis)
+#### [Part 2: Inferences and Analysis](https://github.com/AlexaWu/SQL-Project---Profiling-and-Analyzing-the-Yelp-Dataset/blob/master/Profiling%20and%20Analyzing%20the%20Yelp%20Dataset.md#part-2-inferences-and-analysis)
 1. Pick one city and category of your choice and group the businesses in that city or category by their overall star rating. Compare the businesses with 2-3 stars to the businesses with 4-5 stars
 2. Group business based on the ones that are open and the ones that are closed. What differences can you find between the ones that are still open and the ones that are closed? 
 3. Conduct analysis on the Yelp dataset and prepare the data for analysis
