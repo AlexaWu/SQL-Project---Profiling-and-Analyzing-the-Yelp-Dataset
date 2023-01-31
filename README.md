@@ -1,16 +1,16 @@
 # SQL Project - Profiling and Analyzing the Yelp Dataset 
 
-### :bookmark: Yelp Dataset
+### :bookmark: Project dataset
+
 This project using a large dataset and dataset ER diagram from Yelp, which provides a platform for users to provide reviews and rate their interactions with a variety of organizations – businesses, restaurants, health clubs, hospitals, local governmental offices, charitable organizations, etc. 
 
-### :bookmark: Entity Relationship Diagram 
+#### Entity Relationship Diagram 
 
 _Note: Primary Keys are denoted in the ER-Diagram with a yellow key icon._
 
 ![Yelp Dataset ER Diagram.png](Yelp%20Dataset%20ER%20Diagram.png)
 
-
-### :bookmark: Data Analysis Insights
+### :bookmark: Project details
 
 The project has two parts.
 
