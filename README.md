@@ -1,6 +1,6 @@
 # SQL Project - Profiling and Analyzing the Yelp Dataset 
 
-### :bookmark: Project dataset
+### :seedling: Project dataset
 
 This project using a large dataset and dataset ER diagram from Yelp, which provides a platform for users to provide reviews and rate their interactions with a variety of organizations – businesses, restaurants, health clubs, hospitals, local governmental offices, charitable organizations, etc. 
 
@@ -10,7 +10,7 @@ _Note: Primary Keys are denoted in the ER-Diagram with a yellow key icon._
 
 ![Yelp Dataset ER Diagram.png](Yelp%20Dataset%20ER%20Diagram.png)
 
-### :bookmark: Project summary
+## :seedling: Project summary
 
 The project has two parts.
 
@@ -22,7 +22,7 @@ The project has two parts.
 - predicte the overall star rating for a business
 - predicte the number of fans a user will have
 
-### :bookmark: Project details
+## :seedling: Project details
 
 #### [Part 1: Yelp Dataset Profiling and Understanding](https://github.com/AlexaWu/SQL-Project---Yelp-Dataset/blob/master/Profiling%20and%20Analyzing%20the%20Yelp%20Dataset.md#part-1-yelp-dataset-profiling-and-understanding)
 1. Profile the data by finding the total number of records for each of the tables.
